@@ -1,11 +1,10 @@
-use std::fs::File;
-use std::io::{BufRead, BufReader, Result};
 use std::collections::BinaryHeap;
+use std::io::{BufRead, BufReader, Result};
+use std::fs::File;
 
 #[allow(dead_code)]
 pub fn part1() -> Result<u32> {
-    let filename = "input/day1.txt";
-    let file = File::open(filename).unwrap();
+    let file = File::open("input/day1.txt").unwrap();
     let reader = BufReader::new(file);
 
     let mut max_calories = u32::MIN;
@@ -26,8 +25,7 @@ pub fn part1() -> Result<u32> {
 
 #[allow(dead_code)]
 pub fn part2() -> Result<u32> {
-    let filename = "input/day1.txt";
-    let file = File::open(filename).unwrap();
+    let file = File::open("input/day1.txt").unwrap();
     let reader = BufReader::new(file);
     let mut heap = BinaryHeap::new();
 
