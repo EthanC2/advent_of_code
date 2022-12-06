@@ -69,6 +69,7 @@ pub fn part1() -> i32 {
 }
 
 #[inline(always)]
+#[allow(dead_code)]
 fn contains_overlap(assignment: &GroupAssignment) -> bool {
        overlaps_with_assignment(&assignment.first.start, &assignment.second)
     || overlaps_with_assignment(&assignment.first.end, &assignment.second)
@@ -77,10 +78,12 @@ fn contains_overlap(assignment: &GroupAssignment) -> bool {
 }
 
 #[inline(always)]
+#[allow(dead_code)]
 fn overlaps_with_assignment(idx: &u8, assignment: &SectionAssignment) -> bool {
 	*idx >= assignment.start && *idx <= assignment.end
 }
 
+#[allow(dead_code)]
 pub fn part2() -> i32 {
     let file = File::open("input/day4.txt").unwrap();
     let file = BufReader::new(file);
