@@ -1,8 +1,10 @@
 #![feature(iter_array_chunks)]
 #![feature(iter_advance_by)]
+#![feature(let_chains)]
 
-mod day6;
+mod day7;
 
 fn main() {
-    day6::part1();
+    let size = day7::part1();
+    println!("Total filesystem size: {size}");
 }
